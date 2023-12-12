@@ -6,9 +6,11 @@ int MAXINT = 2147483647;
 string problemCode1 = "1";
 
 int funcToTestAddingTwoNums(int a, int b) {
-	if (MAXINT - a < b) {
-		throw problemCode1;
-		return MAXINT;
+	if (a > 0 && b > 0) {
+		if (MAXINT - a < b) {
+			throw problemCode1;
+			return MAXINT;
+		}
 	}
 	return a + b;
 }
