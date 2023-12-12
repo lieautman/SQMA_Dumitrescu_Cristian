@@ -30,10 +30,9 @@ int main(int argc, char** argv) {
 
 
 	bool testMaxIntResult = testMaxInt();
-
-
-
-
+	if (testMaxIntResult == 1) {
+		return 1;
+	}
 
 
 	return 0;
