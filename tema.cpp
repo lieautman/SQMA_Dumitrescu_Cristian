@@ -26,14 +26,21 @@ bool testMaxInt() {
 
 
 int main(int argc, char** argv) {
+	if (argc > 1) {
+		char* whatTestToRun = argv[0];
+		int whatTestToRunInt = *whatTestToRun-'0';
+		cout << whatTestToRun;
 
 
-
-	bool testMaxIntResult = testMaxInt();
-	if (testMaxIntResult == 1) {
+		bool testMaxIntResult = testMaxInt();
+		if (testMaxIntResult == 1) {
+			return 1;
+		}
+	}
+	else {
+		cout << "No arguments found";
 		return 1;
 	}
-
 
 	return 0;
 }
